@@ -99,14 +99,22 @@ export const girlsSlice = createSlice({
                     const localData = localStorage.getItem(`girls-${girl.id}`);
                     if (localData) {
                         const localGirl = JSON.parse(localData);
-                        return { ...girl, ...localGirl };
+                        return {...girl, ...localGirl};
                     }
                     return girl;
                 });
             }
         },
+        scrollToElement: (state) => {
+            const element = document.getElementById("form");
+
+            if (element) {
+                element.scrollIntoView({behavior: "smooth"});
+            }
+        }
+
     },
 });
 
-export const {isFavorite, isLiked, sortList} = girlsSlice.actions;
+export const {isFavorite, isLiked, sortList,scrollToElement} = girlsSlice.actions;
 export default girlsSlice.reducer;

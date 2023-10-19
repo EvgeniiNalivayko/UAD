@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./JoinSection.module.scss";
 import SignupForm from "../SignupForm/SignupForm";
-import joinImg from "../../assets/image/joinsection/BG.png"
+
 
 const JoinSection = () => {
     return (

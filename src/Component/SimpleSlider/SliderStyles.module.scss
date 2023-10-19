@@ -1,6 +1,7 @@
-.sliderContainer{
+.sliderContainer {
   padding: 20px 0px;
   font-family: Open Sans;
+
   .sliderItem {
     display: flex !important;
     flex-direction: column;
@@ -29,6 +30,7 @@
       line-height: 26px;
     }
   }
+
   @media screen and (max-width: 480px) {
     padding: 30px;
   }

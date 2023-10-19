@@ -1,9 +1,14 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import Slider from 'react-slick';
 import classes from './TargetAddSlider.module.scss'
-
+import {useSelector, useDispatch} from 'react-redux';
+import {scrollToElement} from '../GirlProfilesList/GirlCard/Redux/girlsSlice'
 
 const TargetAddSlider = () => {
+    const dispatch = useDispatch()
+    const handleScrollToElement = () => {
+        dispatch(scrollToElement());
+    };
     const settings = {
         dots: true,
         infinite: false,
@@ -69,7 +74,7 @@ const TargetAddSlider = () => {
 
 
             </div>
-            <button className={`btn-primary`}>find love now</button>
+            <button onClick={handleScrollToElement} className={`btn-primary`}>find love now</button>
         </div>)
 
 }

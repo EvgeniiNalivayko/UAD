@@ -11,7 +11,6 @@ const FooterSection = () => {
         }
     }, []);
 
-
     return (
         <div className={classes.wrapperFooter}>
             <h2>Chat With Ukrainian Single Women</h2>

@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import classes from './SignupForm.module.scss'
-
+import { Link } from 'react-router-dom';
 
 const SignupForm = () => {
         const [email, setEmail] = useState('');
@@ -39,7 +39,7 @@ const SignupForm = () => {
 
 
         return (
-            <form className={classes.signupForm} onSubmit={onSubmit}>
+            <form id={'form'} className={classes.signupForm} onSubmit={onSubmit}>
                 <div className={classes.wrapperInputs}>
                     <h2>Sign Up</h2>
                     <div className={classes.line}></div>

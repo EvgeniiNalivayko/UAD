@@ -1,10 +1,15 @@
 import React from 'react';
 import classes from './MainPage.module.scss'
 import SignupForm from "../SignupForm/SignupForm";
+import {useSelector, useDispatch} from 'react-redux';
+import {scrollToElement} from '../GirlProfilesList/GirlCard/Redux/girlsSlice'
 
 
 const MainPage = () => {
-
+    const dispatch = useDispatch()
+    const handleScrollToElement = () => {
+        dispatch(scrollToElement());
+    };
     return (
         <div className={classes.mainPage}>
             <div className={classes.wrapperPage + ' container'}>
@@ -14,7 +19,7 @@ const MainPage = () => {
                 </div>
                 <div className={classes.header}>
                     <p>UaDreams</p>
-                    <button className={'btn-primary'}>Sign Up</button>
+                    <button nClick={handleScrollToElement} className={'btn-primary'}>Sign Up</button>
                 </div>
                 <div className={classes.content}>
                     <div className={classes.left}>
@@ -24,7 +29,7 @@ const MainPage = () => {
                             <span>More than a thousand single women are ready for a serious relationship and are waiting for your message.
                     </span>
                         </div>
-                        <button className={classes.btn + ' btn-primary'}>View profiles</button>
+                        <button onClick={handleScrollToElement} className={classes.btn + ' btn-primary'}>View profiles</button>
                     </div>
                     <div className={classes.wrapperLogin}>
                         <SignupForm/>

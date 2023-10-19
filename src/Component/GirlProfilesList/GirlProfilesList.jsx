@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import GirlCard from "./GirlCard/GirlCard";
 import classes from "./GirlProfilesList.module.scss"
 import {useDispatch, useSelector} from "react-redux";
-import {sortList} from './GirlCard/Redux/girlsSlice';
+import {sortList,scrollToElement} from './GirlCard/Redux/girlsSlice';
 
 const GirlProfilesList = () => {
     let girl = useSelector(state => state.girls.sortArray)
@@ -17,7 +17,9 @@ const GirlProfilesList = () => {
     const sortProfile = (by) => {
         dispatch(sortList(by));
     }
-
+    const handleScrollToElement = () => {
+        dispatch(scrollToElement());
+    };
     return (
         <div className={classes.wrapperProfileList}>
             <h2><span>1000+</span> real Ukrainian Women profiles </h2>
@@ -36,8 +38,8 @@ const GirlProfilesList = () => {
                 ))}
             </div>
             <div className={classes.btnGroup}>
-                <button className={'btn-primary'}>see more ladies</button>
-                <button className={classes.btnFilter + ' btn-primary'}>more filters</button>
+                <button  onClick={handleScrollToElement} className={'btn-primary'}>see more ladies</button>
+                <button onClick={handleScrollToElement} className={classes.btnFilter + ' btn-primary'}>more filters</button>
             </div>
         </div>
     )

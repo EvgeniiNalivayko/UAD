@@ -5,18 +5,23 @@ import favoriteOn from "../../../assets/image/favorite_on.svg";
 import like from "../../../assets/image/like.svg";
 import birthdayIcon from "../../../assets/image/birthday-icon.svg";
 import {useSelector, useDispatch} from 'react-redux';
-import {isFavorite, isLiked} from './Redux/girlsSlice';
+import {isFavorite, isLiked,scrollToElement} from './Redux/girlsSlice';
 
 
 const GirlCard = ({girl, index}) => {
+    const dispatch = useDispatch();
     const [isBirthdaySoon, setIsBirthdaySoon] = useState(false);
     const [isShow, setIsShow] = useState(false);
     const [isConnection, setIsConnection] = useState(false)
     const [day, month, year] = girl.birthday.split('.').map(Number);
     const dateInMilliseconds = new Date(year, month - 1, day).getTime();
 
-    const dispatch = useDispatch();
-    let select = new Set()
+
+
+
+    const handleScrollToElement = () => {
+        dispatch(scrollToElement());
+    };
 
     const toggleFavorite = () => {
         if (girl.isFavorite && !girl.like) {
@@ -89,11 +94,11 @@ const GirlCard = ({girl, index}) => {
                             <button onClick={showConnection} className={' btn-primary' + ' btn-orange'}>want to chat
                             </button>
                             <a>
-                                <img src="./BirthdayButton.svg" alt="Give a gift"/>
+                                <img src="/BirthdayButton.svg" alt="Give a gift"/>
                             </a>
                         </div>
                         : <div className={classes.wrapperBirthdayBtnGroup + ` ${classes.showConnection}`}>
-                            <button onClick={showConnection} className={' btn-primary' + ' btn-blue'}><img
+                            <button onClick={handleScrollToElement} className={' btn-primary' + ' btn-blue'}><img
                                 src="/First.svg" alt=""/>chat
                                 now
                             </button>
