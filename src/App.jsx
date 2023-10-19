@@ -5,9 +5,9 @@ import GirlProfilesList from "./Component/GirlProfilesList/GirlProfilesList";
 import VideoChat from "./Component/VideoChat/VideoChat";
 import JoinSection from "./Component/JoinSection/JoinSection";
 import FooterSection from "./Component/FooterSection/FooterSection";
-import StatisticsSlider from "./Component/SimpleSlider/StatisticsSlider/StatisticsSlider";
-import TargetAddSlider from "./Component/SimpleSlider/TargetAddSlider/TargetAddSlider";
-import FeedBackSlider from "./Component/SimpleSlider/FeedBackSlider/FeedBackSlider";
+import StatisticsSlider from "./Component/StatisticsSlider/StatisticsSlider";
+import TargetAddSlider from "./Component/TargetAddSlider/TargetAddSlider";
+import FeedBackSlider from "./Component/FeedBackSlider/FeedBackSlider";
 
 
 
