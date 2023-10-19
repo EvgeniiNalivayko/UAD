@@ -1,0 +1,45 @@
+.wrapperFooter {
+  padding: 60px;
+  font-family: Open Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  padding: 60px;
+  h2 {
+    text-align: center;
+  }
+
+  .flexContainer {
+    display: flex;
+
+    .column {
+      width: 50%;
+      flex: 1;
+      padding: 10px;
+    }
+
+    .isShow{
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 14px;
+      color: #45B61D;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    h2 {
+      font-size: 30px;
+      line-height: initial;
+    }
+    .flexContainer {
+      flex-direction: column;
+      .column {
+        width: 100%;
+      }
+    }
+  }
+}

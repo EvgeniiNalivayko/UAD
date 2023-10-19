@@ -1,0 +1,40 @@
+.wrapperChat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  padding: 40px 100px;
+  background-image: none;
+  text-align: center;
+  @media (min-width: 768px) {
+    background-image: url("../../assets/image/videochat/backTable.png");
+  }
+  @media (max-width: 480px) {
+    height: initial;
+  }
+
+  .isNote {
+    background-image: url("../../assets/image/videochat/laptop.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 1000px;
+    height: 540px;
+    @media (max-width: 768px) {
+      background-image: url("../../assets/image/videochat/mobile.png");
+      width: 259px;
+      height: 516px;
+      .wrapperChat{
+        p{
+          display: none;
+        }
+      }
+
+    }
+  }
+
+}

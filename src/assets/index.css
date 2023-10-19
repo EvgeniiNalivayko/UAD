@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    margin: 0;
+
+
+}
+
+#root {
+    overflow-x: hidden;
+}
+
+.slick-dots li.slick-active button:before {
+    color: #FFFFFF;
+}
+
+* {
+    box-sizing: border-box;
+
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.wrapperCard {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    width: 960px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.btnGroup {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
+
+h2 {
+    font-size: 48px;
+    font-weight: 500;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Montserrat;
+    margin: 0;
+}
+
+p {
+    margin: 0 auto;
+    font-family: Open Sans;
+}
+
+.btn-primary {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 290px;
+    height: 44px;
+    border-radius: 2px;
+    background-color: #45B61D;
+    border: none;
+    color: white;
+    transition: 0.3s;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+
+.btn-primary:hover {
+    background-color: #348a16;
+}
+
+.btn-orange {
+    background-color: #FBB802;
+}
+
+.btn-orange:hover {
+    background-color: #6e5012;
+}
+
+.btn-blue {
+    background-color: #2D9CDB;
+
+}
+
+.btn-blue:hover {
+    background-color: blue;
+}
+
+input {
+    outline: none;
+    width: 100%;
+    border-radius: 2px;
+    border: 1px solid #858585;
+    padding: 14px 10px;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #000C7E;
+}
+
+a:hover {
+    opacity: 0.7;
+}
