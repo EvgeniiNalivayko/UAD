@@ -1,146 +1,132 @@
 .mainPage {
   display: flex;
   flex-direction: column;
-  padding: 24px;
-  min-height: 100%;
-  color: #fff;
   background-image: url('../../assets/image/HeaderBanner.png');
+  color: #FFFFFF;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
 
-
-  .wrapperPage {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    .wrapperLogin {
-      width: 330px;
-    }
+  h2 {
+    font-family: Montserrat;
+    font-size: 30px;
+    font-weight: 700;
   }
 
-  .counter {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    span {
-      text-align: left;
-
-      &:first-child {
-        font-family: Montserrat;
-        font-size: 48px;
-        font-weight: 500;
-        line-height: 59px;
-      }
-
-      &:last-child {
-        font-family: Open Sans;
-        font-size: 18px;
-        font-weight: 400;
-        line-height: 30px;
-      }
-    }
-
-  }
-
-
-
-}
-@media screen and (min-width: 680px) {
-  .content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-
-    .left {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      h2 {
-        font-size: 30px;
-        font-weight: 700;
-      }
-      button{
-
-      }
-      .description {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 85px;
-        max-width: 665px;
-
-        span {
-          font-family: Open Sans;
-          font-size: 18px;
-          font-weight: 600;
-          line-height: 130%;
-        }
-      }
-
-      .btn {
-        margin-top: 8px;
-      }
-
-    }
-  }
-}
-.header {
-  display: none;
-}
-
-
-@media screen and (max-width: 680px) {
-  .mainPage {
-    .wrapperPage {
-
-    }
-
-    .counter {
-      display: none;
-    }
-
-    .content {
-      display: flex;
-      font-size: 30px;
-
-      .left {
-        display: flex;
-        flex-direction: column;
-        gap: 14px;
-        span {
-          font-size: 16px;
-        }
-      }
-
-
-
-    }
-  }
-  .left {
-    padding: 24px;
-  }
-  .wrapperLogin {
-    display: none;
+  span {
+    font-family: Open Sans;
+    font-size: 16px;
+    font-weight: 300;
   }
 
   .header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
     display: flex;
     justify-content: space-between;
-    background: white;
+    color: black;
+    background-color: #FFFFFF;
+
+    p {
+      padding: 14px 20px 0 14px;
+      margin: 0;
+
+      span {
+        color: red;
+      }
+    }
 
     button {
-      width: 25%;
+      width: 101px;
     }
   }
 
+  .wrapperContent {
+    display: flex;
+    flex-direction: column;
+    padding: 0 16px 24px 16px;
+    margin-top: 182px;
 
+    .content {
+      .description {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+
+        .counter {
+          display: flex;
+          flex-direction: column;
+
+          span:first-child {
+            font-family: Montserrat;
+            font-size: 30px;
+            font-weight: 600;
+          }
+        }
+
+
+      }
+
+      button {
+        margin-top: 20px;
+        width: 100%;
+      }
+    }
+  }
+
+  .wrapperLogin {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .mainPage {
+    span {
+      font-size: 18px;
+    }
+
+    .header {
+      display: none;
+    }
+
+    .wrapperContent {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 60px;
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        button{
+          width: 260px;
+        }
+      }
+
+      .counter {
+        position: absolute;
+        top: 24px;
+        left: 24px;
+      }
+    }
+
+    .wrapperLogin {
+      display: block;
+      width: 331px;
+      height: 480px;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .mainPage {
+    .wrapperContent {
+      margin-bottom: 40px;
+    }
+
+    span {
+      width: 600px;
+      font-size: 18px;
+    }
+
+  }
 }

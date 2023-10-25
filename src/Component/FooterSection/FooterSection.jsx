@@ -6,9 +6,14 @@ const FooterSection = () => {
     const [isShow, setIsShow] = useState(false)
 
     useEffect(() => {
-        if (window.innerWidth >= 992) {
-            setIsShow(true);
-        }
+        const handleResize = () => {
+            setIsShow(window.innerWidth >= 992);
+        };
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
     }, []);
 
     return (

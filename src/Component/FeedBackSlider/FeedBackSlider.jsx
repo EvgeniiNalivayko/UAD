@@ -1,8 +1,9 @@
 import React from 'react';
 import Slider from 'react-slick';
-import classes from "./FeedBackSlider.module.scss";
-import {useSelector, useDispatch} from 'react-redux';
 import {scrollToElement} from '../GirlProfilesList/GirlCard/Redux/girlsSlice'
+import { useDispatch} from 'react-redux';
+import classes from "./FeedBackSlider.module.scss";
+
 
 
 const FeedBackSlider = () => {
@@ -11,13 +12,18 @@ const FeedBackSlider = () => {
         dispatch(scrollToElement());
     };
     const settings = {
-        dots: false, infinite: true, speed: 700, slidesToShow: 4, slidesToScroll: 1, responsive: [{
-            breakpoint: 1100, settings: {
-                slidesToShow: 4, slidesToScroll: 1, infinite: true, dots: true
+        dots: false,
+        infinite: true,
+        speed: 700,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        responsive: [{
+            breakpoint: 1200, settings: {
+                slidesToShow: 4, slidesToScroll: 1, infinite: true, dots: false
             }
         }, {
             breakpoint: 992, settings: {
-                slidesToShow: 2, slidesToScroll: 1, dots: true
+                slidesToShow: 2, slidesToScroll: 1, dots: false
             }
         }, {
             breakpoint: 576, settings: {
@@ -74,7 +80,8 @@ const FeedBackSlider = () => {
                 </div>
             </div>
         </Slider>
-        <button onClick={handleScrollToElement} className={`btn-primary`}>find love now</button>
+
+        <button onClick={handleScrollToElement} className={`btn-primary`}>more testimonials</button>
     </div>)
 
 }

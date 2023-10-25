@@ -2,38 +2,51 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 100%;
-  padding: 40px 100px;
-  background-image: none;
   text-align: center;
-  @media (min-width: 768px) {
-    background-image: url("../../assets/image/videochat/backTable.png");
+  padding: 24px 5px;
+  gap: 20px;
+
+  h2 {
+    font-size: 32px;
   }
-  @media (max-width: 480px) {
-    height: initial;
+
+  p {
+    display: none
   }
 
   .isNote {
-    background-image: url("../../assets/image/videochat/laptop.svg");
+    width: 260px;
+    height: 520px;
+    background-image: url("../../assets/image/videochat/mobile.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    width: 1000px;
-    height: 540px;
-    @media (max-width: 768px) {
-      background-image: url("../../assets/image/videochat/mobile.png");
-      width: 259px;
-      height: 516px;
-      .wrapperChat {
-        p {
-          display: none;
-        }
-      }
+  }
+}
 
+@media (min-width: 992px) {
+  .wrapperChat {
+    background-image: url("../../assets/image/videochat/backTable.png");
+    color: #FFFFFF;
+    gap: 30px;
+
+    h2 {
+      font-size: 34px;
+    }
+
+    p {
+      display: block;
+      font-size: 18px;
+      font-weight: 700
+    }
+
+    .isNote {
+      background-image: url("../../assets/image/videochat/laptop.svg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 1000px;
+      height: 540px;
     }
   }
 

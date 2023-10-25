@@ -39,7 +39,7 @@ const GirlProfilesList = () => {
             </div>
             <div className={classes.btnGroup}>
                 <button  onClick={handleScrollToElement} className={'btn-primary'}>see more ladies</button>
-                <button onClick={handleScrollToElement} className={classes.btnFilter + ' btn-primary'}>more filters</button>
+                <button onClick={handleScrollToElement} className={classes.btnFilters + ' btn-primary'}>more filters</button>
             </div>
         </div>
     )

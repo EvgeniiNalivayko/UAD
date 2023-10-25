@@ -1,12 +1,14 @@
 .wrapperProfileList {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin: 80px 0;
+  align-items: center;
+  gap: 30px;
+  text-align: center;
+  padding: 48px 0;
 
   h2 {
     text-align: center;
-    font-size: 48px;
+    font-size: 32px;
     font-weight: 500;
 
     span {
@@ -17,7 +19,9 @@
   .filter {
     display: flex;
     justify-content: center;
-    gap: 24px;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0 24px;
 
     a {
       font-family: Open Sans;
@@ -28,43 +32,18 @@
     }
   }
 
-  @media (max-width: 567px) {
-    .filter {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-  }
-  @media (min-width: 567px) {
-    .filter a:nth-child(n+4) {
-      display: none;
-    }
-  }
-
   .wrapperCard {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 60px;
-  }
-
-  @media (max-width: 567px) {
-    .wrapperCard {
-      display: flex;
-      justify-content: center;
-    }
+    flex-direction: column;
+    gap: 20px;
   }
 
   .btnGroup {
     display: flex;
-    justify-content: center;
-    gap: 16px;
+    flex-direction: column;
+    gap: 12px;
 
-    button {
-      height: 60px;
-    }
-
-    .btnFilter {
+    .btnFilters {
       background: transparent;
       border: 1px solid black;
       color: black;
@@ -75,40 +54,30 @@
       }
     }
   }
+}
 
-  @media (max-width: 567px) {
-    .btnGroup {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 12px;
+@media (min-width: 992px) {
+  .wrapperProfileList {
+
+    .filter {
+      gap: 24px;
+      a:nth-child(n+4) {
+        display: none;
+      }
     }
 
+    .wrapperCard {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 920px;
+    }
+
+    .btnGroup {
+      flex-direction: row;
+      gap: 16px;
+    }
   }
 }
 
-@media (max-width: 567px) {
-  .wrapperProfileList {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0 auto;
-    padding: 20px 32px;
-    gap: 20px;
-  }
-}
 
-@media (min-width: 567px) {
-  .wrapperProfileList {
-    gap: 20px;
-    margin: 0 auto;
-  }
-}
-
-@media (min-width: 1300px) {
-  .wrapperProfileList {
-    padding: 80px 140px;
-    margin: 0 auto;
-    gap: 40px;
-  }
-}
